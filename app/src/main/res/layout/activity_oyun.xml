@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.punwald.iqchallenge.Oyun">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/geri"
+        android:id="@+id/geri"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ileri"
+        android:id="@+id/ileri"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="soru"
+        android:id="@+id/bolumText"
+        android:ems="5"
+        android:layout_alignBaseline="@+id/geri"
+        android:layout_alignBottom="@+id/geri"
+        android:layout_centerHorizontal="true" 
+        android:textAlignment="center"/>
+    
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageview"
+        android:layout_below="@+id/geri"
+        android:layout_toRightOf="@+id/geri"
+        android:layout_toEndOf="@+id/geri"
+        android:layout_marginLeft="14dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="98dp" />
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/cevap"
+        android:hint="Cevap"
+        android:ems="10"
+        android:layout_marginBottom="12dp"
+        android:textAlignment="center"
+        android:layout_above="@+id/cevapButon"
+        android:layout_toLeftOf="@+id/ileri"
+        android:layout_toStartOf="@+id/ileri" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cevapla"
+        android:id="@+id/cevapButon"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/bolumText"
+        android:layout_alignEnd="@+id/bolumText"
+        android:layout_marginRight="14dp"
+        android:layout_marginEnd="14dp"
+        android:layout_marginBottom="125dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="İpucu"
+        android:id="@+id/ipucuButon"
+        android:layout_alignBaseline="@+id/ipucuText"
+        android:layout_alignBottom="@+id/ipucuText"
+        android:layout_alignRight="@+id/imageview"
+        android:layout_alignEnd="@+id/imageview" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ipucuText"
+        android:hint="***İpucu***"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="72dp" />
+    
+
+</RelativeLayout>

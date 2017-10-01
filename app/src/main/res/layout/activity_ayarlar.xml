@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.punwald.iqchallenge.Ayarlar">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ses Seviyesini Ayarla"
+        android:id="@+id/sesText"
+        android:textSize="24dp"
+        android:layout_marginTop="57dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/ses"
+        android:layout_alignEnd="@+id/ses" />
+
+    <SeekBar
+        android:id="@+id/ses"
+        android:layout_width="250dp"
+        android:layout_height="45dp"
+        android:max="100"
+        android:layout_below="@+id/sesText"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="41dp"
+        android:layout_marginStart="41dp"
+        android:layout_marginTop="25dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/iletisim"
+        android:text="İletişim"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_below="@+id/ses"
+        android:layout_alignLeft="@+id/sesText"
+        android:layout_alignStart="@+id/sesText"
+        android:layout_marginTop="100dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="56dp"
+        android:text="punwald.com"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="28dp" />
+
+
+</RelativeLayout>
