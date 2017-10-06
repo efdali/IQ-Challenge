@@ -1,12 +1,15 @@
 package com.punwald.iqchallenge;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 
-public class Anasayfa extends AppCompatActivity {
+public class Anasayfa extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -15,6 +18,10 @@ public class Anasayfa extends AppCompatActivity {
 
         Button oynaBtn= (Button) findViewById(R.id.oyna);
         Button ayarlarBtn= (Button) findViewById(R.id.ayarlar);
+
+        Animation animation= AnimationUtils.loadAnimation(getApplicationContext(),R.anim.oynabutonanim);
+        oynaBtn.startAnimation(animation);
+        ayarlarBtn.startAnimation(animation);
 
         oynaBtn.setOnClickListener(new View.OnClickListener() {
             @Override

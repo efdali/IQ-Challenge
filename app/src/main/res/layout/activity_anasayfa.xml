@@ -1,27 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.punwald.iqchallenge.Anasayfa">
+    tools:context="com.punwald.iqchallenge.Anasayfa"
+    android:background="@drawable/bg"
+    android:orientation="vertical"
+    android:weightSum="5">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:background="@drawable/logo"
+        android:id="@+id/logo"
+        android:layout_weight="4"/>
 
-    <Button
-        android:layout_width="wrap_content"
+    <RelativeLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/oyna"
-        android:id="@+id/oyna"
-        android:layout_above="@+id/ayarlar"
-        android:layout_alignLeft="@+id/ayarlar"
-        android:layout_alignStart="@+id/ayarlar"
-        android:layout_marginBottom="42dp" />
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/ayarlar"
-        android:id="@+id/ayarlar"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="196dp" />
+        android:layout_weight="1">
 
-</RelativeLayout>
+        <Button
+            android:id="@+id/oyna"
+            android:layout_width="260dp"
+            android:layout_height="80dp"
+            android:background="@drawable/btnoyna"
+            android:layout_marginLeft="55dp"/>
+
+        <Button
+            android:id="@+id/ayarlar"
+            android:layout_width="260dp"
+            android:layout_height="80dp"
+            android:layout_below="@+id/oyna"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="54dp"
+            android:background="@drawable/btnayar" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl"
+        android:layout_width="match_parent"
+        android:layout_height="100dp">
+
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,5 +1,6 @@
 package com.punwald.iqchallenge;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -7,13 +8,18 @@ import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class Oyun extends AppCompatActivity implements View.OnClickListener{
+public class Oyun extends Activity implements View.OnClickListener{
+    /*Animasyon*/
+    Animation gecisAnimation,yanlisCevapAnimation;
 
     MediaPlayer dogruM,yanlısM,arkaPlanM;
 
@@ -22,6 +28,7 @@ public class Oyun extends AppCompatActivity implements View.OnClickListener{
     SharedPreferences.Editor editor;
 
     /*View Erişimler*/
+    RelativeLayout relativeLayout;
     ImageView imageView;
     Button cevapB,tipB,ileriB,geriB;
     EditText cvpGirdi;
@@ -40,6 +47,12 @@ public class Oyun extends AppCompatActivity implements View.OnClickListener{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_oyun);
         Intent i=getIntent();
+        relativeLayout= (RelativeLayout) findViewById(R.id.layout);
+
+        /*Animasyon*/
+        gecisAnimation = AnimationUtils.loadAnimation(this,R.anim.sorugecisanim);
+        yanlisCevapAnimation=AnimationUtils.loadAnimation(this,R.anim.yanliscevapanim);
+
 
         imageView= (ImageView) findViewById(R.id.imageview);
         cevapB= (Button) findViewById(R.id.cevapButon);
@@ -105,6 +118,7 @@ public class Oyun extends AppCompatActivity implements View.OnClickListener{
                             tipHakki++;
                         }
                         kacinciTip=suan;
+                        imageView.startAnimation(gecisAnimation);
                         imageView.setBackgroundResource(sorular[suan]);
                         bolumText.setText("#" + (suan+1));
                         cvpGirdi.setText("");
@@ -114,6 +128,7 @@ public class Oyun extends AppCompatActivity implements View.OnClickListener{
 
                     }/*Kontrol İf*/else{
                         //yanlısM.start();
+                        relativeLayout.startAnimation(yanlisCevapAnimation);
                         Toast.makeText(this,"Yanlış Cevap",Toast.LENGTH_LONG).show();
                     }
                 }else {

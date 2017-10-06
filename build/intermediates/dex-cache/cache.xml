@@ -3,21 +3,21 @@
 
     <item
         is-multidex="true"
-        jar="C:\Android\IQChallenge\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="602bf64351f928bf546cc6c5e213b516d171f806">
-        <dex dex="C:\Android\IQChallenge\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_2bf31adc541c215bab265b5a2b5baf7960dd4efe\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="C:\Android\IQChallenge\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
         sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
         <dex dex="C:\Android\IQChallenge\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_e45b32abc7ca08a4912b5c550ac69090a209f4a7\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Android\IQChallenge\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="91a35fda5fb4cd4ba59c74cd8b48192f36e57e16">
+        <dex dex="C:\Android\IQChallenge\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_2bf31adc541c215bab265b5a2b5baf7960dd4efe\classes.dex" />
     </item>
 
 </items>
